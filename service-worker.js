@@ -1,8 +1,9 @@
-const CACHE_NAME = "vocab-trainer-v2";
+const CACHE_NAME = "vocab-trainer-v3";
 const APP_SHELL = [
   "./",
   "index.html",
   "style.css",
+  "data-loader.js",
   "app.js",
   "manifest.json",
   "data/sample.csv"
