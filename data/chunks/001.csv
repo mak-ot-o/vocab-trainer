@@ -1,0 +1,101 @@
+rank,word,part_of_speech,definition,japanese,example
+1,the,determiner,used to refer to something already mentioned,その,The door is already open.
+2,be,verb,To exist; to be alive; used to give information about someone or something,～である；なる,We will be ready soon.
+3,and,conjunction,used to refer to two or more things,～と;そして,Parks and streets matter.
+4,of,preposition,belonging to or connected with something,～の；～から；～について,All of them are connected.
+5,to,preposition,move towards; in the direction of,～へ；～に；～まで；～に対して；～すること；～ために,We walked to school.
+6,a,determiner,one (of something),一つの,I saw a small bird.
+7,in,preposition,being inside something,〜の中の,The keys are in the bag.
+8,have,auxiliary verb,"to own, possess, or hold something",持っている,I have a small garden.
+9,it,pronoun,a thing that has been previously mentioned,(先行するものを指して)それ,It has been mentioned several times.
+10,you,pronoun,person someone is speaking or writing to,あなた,They want to speak with you.
+11,he,pronoun,object form of a male person you are talking about,彼,He was talking about me.
+12,for,preposition,"used to show the purpose, or need of something",～のために；～に向かって；～にとって；～に関して；～に賛成して；～の代わりに；～だから,For what purpose do you need it?
+13,they,pronoun,"used to refer to two or more people, animals, or things",彼ら；彼女ら；それら,They are people of a kind.
+14,not,adverb,"word indicating the negative of verbs, adjectives, etc.",～ではない,This is not the answer.
+15,that,pronoun,used to show which person or thing we are talking about,それ；あれ；そのようなこと，その；あの，それくらい,Tom talked about things that interested him.
+16,we,pronoun,used to refer to the speaker and other people together,私達,We used to do that together.
+17,on,preposition,"located on the surface of something (e.g., a table or wall)",～の上にある,There's a picture on the wall.
+18,with,preposition,used to express that people or things are together,～と一緒に; ～で；～の一員で；～に賛成して；～した状態で,They're people we work with.
+19,this,pronoun,"person, thing, or idea near you",この，これ，こんなに,"This was my idea, not Tom's."
+20,I,pronoun,the person who is speaking or writing,私,Who am I currently speaking to?
+21,do,verb,to act; to perform actions,する,Act the way you always do.
+22,as,preposition,a word used to compare two equal things,同じぐらい；～のように;～なので,This is as big as that.
+23,at,preposition,in the place where something is,～の所で；～に,Find them at that place.
+24,she,pronoun,female person or animal mentioned before,彼女,She admires the animals.
+25,but,conjunction,"used before you say something different, opposite",でも,"It's easy to say, but not to do."
+26,from,preposition,"starting at a particular place, time, or level",～から；～出身の,We started from scratch.
+27,by,preposition,near; with,～の近くに；沿って,The cafe is by the station.
+28,will,auxiliary verb,used with verbs to express the future,～するつもりである；～でしょう；どうしても～するものだ；～しなさい；～することがある,We will start tomorrow morning.
+29,or,conjunction,"used to link alternatives, to introduce another choice",または,Tea or coffee will work.
+30,say,verb,to use words to tell a message,言う；言葉を使う,Can I say a word?
+31,go,verb,to move or travel to another place,行く,We go to work early.
+32,so,conjunction,for that reason,その理由で,"I was tired, so I rested."
+33,all,adverb,completely; totally,すべて,The floor was all wet.
+34,if,conjunction,introducing a condition for something to happen,もし,Call me if you need help.
+35,one,number,number 1,一つ；人;もの,I need one more chair.
+36,would,auxiliary verb,"modal verb used to indicate possibility, request, etc.",～だろう；～したい；よく～したものだった；～しようとしてきかない,I would like some water.
+37,about,preposition,of (a subject); concerning,～について,We talked about the project.
+38,can,auxiliary verb,to be able to; have the skill to; have the time to,〜することができる,I can finish this today.
+39,which,adjective,question word to ask about a person's choice,どちら,Which option do you prefer?
+40,there,adverb,"in that place or position, at that location",そこ；あそこ；そこで；そこに,I will go there in place of you.
+41,know,verb,to have knowledge of things in your mind,知っている,I know you've got things on your mind.
+42,more,adjective,"greater in amount, number, or size",もっと,The number of volunteers grew more and more.
+43,get,verb,"to obtain, receive, or be given something",得る；受ける,Do you get what he means?
+44,who,pronoun,"what or which person or people, to ask about, talking about",誰,Who do you ask about?
+45,like,verb,to find something pleasing; to prefer something,好む,Did you find something you like?
+46,when,noun,word you use to ask about the time or day,いつ,When will the meeting start?
+47,think,verb,"to have an idea, opinion, or belief about something",考える；思う,I think he has an idea.
+48,make,verb,to create something by putting things together,作る,We'll make it together!
+49,time,noun,"something measured in minutes, hours, days, etc.",時間,What's the time now in hours and minutes?
+50,see,verb,to use your eyes to look at something,見る,We see with our eyes.
+51,what,adverb,asking for information about someone or something,何,What do you need today?
+52,up,preposition,move higher; raise,上へ；立って；起こって,Raise up your left hand.
+53,some,determiner,used to refer to a person or thing that is not known,いくらかの；ある；およそ,Some details aren't yet known.
+54,other,adjective,something else; not the first one,もう一方の；別の；他の，もう一方の人・物；別の人・物；その他,"Not this shirt, the other one."
+55,out,preposition,away from the inside or center,外に；外に出て；外れて,You must get out right away.
+56,good,adjective,excellent; high quality,良い,These things are good quality.
+57,people,noun,human beings in general; plural of person,人々,"The plural of 'person' is 'people', not 'persons'."
+58,year,noun,unit of time equal to 12 months,年,A year consists of twelve months.
+59,take,verb,to pick up something and go away with it,持ち帰る、取る,Take away this box.
+60,no,adverb,being none; not having or being,いいえ，少しの～もない；決して～ない,She no longer despises him.
+61,well,adverb,in a good way,上手に；よく,"If you're doing well, that's good."
+62,because,conjunction,for a reason,なぜなら～だから,We stayed because it rained.
+63,very,adverb,much; great in amount,とても，まさに；非常に,I appreciate it very much.
+64,just,adverb,only; a short time ago,正確に；ただ,I was only just in time.
+65,come,verb,to move toward someone; go with someone,行く,Come quick towards me!
+66,could,auxiliary verb,"used as the past form of can, to show possibility",～できた；たぶん…だろう,He showed what he could do.
+67,work,noun,activity you do in order to make money,仕事；作業,You're all about work and money.
+68,use,verb,"to do something with, for a task or purpose",使う；利用する,Feel free to use it yourself.
+69,than,conjunction,used when comparing two things,～よりも,He looks healthier than he used to.
+70,now,adverb,at the present time or moment,今；すぐに；これから；さて；いまや～だから,The right moment is now.
+71,then,adverb,at that time not now,あのとき；それから,Things were better then than now.
+72,also,adverb,in addition; too; in a similar way,～もまた；同様に；その上,They are also too good.
+73,into,preposition,going inside something,～の中へ,I'm going into the house.
+74,only,adverb,just one; just that amount or thing; not more than,唯一の；最良の，ただ～だけ；つい～，ただし；～だがしかし,Only one thing counts.
+75,look,verb,to turn your eyes in a particular direction,見る,Turn around and look.
+76,want,verb,to desire or wish for something; hope for a thing,～が欲しい；望んでいる；～したいと思う,Wish for what you really want.
+77,give,verb,to hand over or present something to someone,手渡す,They give presents to one another.
+78,first,adjective,coming before all others in time or place,一番最初の,What time is your first class?
+79,new,adjective,"not old, recently born, built, or made",新しい,New factories were built.
+80,way,noun,how something is done,方法；やり方,I want things done my way.
+81,find,verb,to discover something by looking for it,発見する,"What you go looking for, you will find."
+82,over,preposition,above; across; more than; on the other side,～の上に,Cross over to the other side.
+83,any,adjective,one (thing) of many; some (thing),（疑問文で）何か；いくらか，（否定文で）どれも；少しも，（肯定文で）どれでも,Do you have any questions?
+84,after,adverb,"later than another time, or behind something",～後で；～を追って,"After all, tomorrow is another day."
+85,day,noun,a period of 24 hours,日,A day has twenty-four hours.
+86,where,noun,word you use to ask the location of something,どこ,Where is the nearest station?
+87,thing,noun,something you cannot remember the name of,事,You won't remember a thing.
+88,most,pronoun,nearly all of something,最も,Most people agreed with us.
+89,should,auxiliary verb,used to indicate what is proper or reasonable,～べきである,Tom should have been reasonable.
+90,need,verb,to be unable to manage without something; require,必要,You need to manage your stress.
+91,much,pronoun,a lot; large amount; a high degree of,たくさんの，非常に；だいたい,There isn't much time left.
+92,right,adjective,on side where the hand that most people write with,右の；右に,Write with the right hand.
+93,how,adverb,in what way something happens or is done,どのように,How does this system work?
+94,back,adjective,behind; to the rear; previous,後ろの；以前の,Please come back tomorrow.
+95,mean,verb,to have a particular meaning or value,意味する；価値のある,Do you understand what I mean?
+96,even,adverb,as well; too,更に,Even 30 minutes is too long.
+97,may,auxiliary verb,used to talk about what is possible,〜してもよい；～かもしれない；～であろう,There may be discussions about it.
+98,here,adverb,"in, at, or to this position or place",ここに,"Your place is here, in your father's house."
+99,many,adjective,used to refer to a large number of things,多くの，多数,I used many things.
+100,such,adjective,"so like, or similar",そのような；とても～な,Such behavior is just like Meg.
