@@ -11,6 +11,9 @@ A minimal iPhone-friendly vocabulary trainer built as a static PWA.
 - Long press: reveal the Japanese gloss.
 - Study in frequency order or random order.
 - Filter by `part_of_speech`.
+- Filter by saved review status: **All**, **Not reviewed**, **Know**, **Don't know**, **Unsure**, or **Don't know + Unsure**.
+- Combine review status, part of speech, and frequency/random order freely.
+- Review-status filters use the latest saved status for each word; changing a status during a session affects later sessions, not the already-built current queue.
 - Import another CSV to replace the active vocabulary set.
 - Export learning results as CSV.
 - Saves vocabulary and review results locally in the browser.
@@ -70,7 +73,7 @@ Public URL:
 
 `https://mak-ot-o.github.io/vocab-trainer/`
 
-The repository rename to `mak-ot-o/vocab-trainer` was confirmed on 2026-09-03. This update triggers a fresh Pages deployment under the final repository slug.
+The repository rename to `mak-ot-o/vocab-trainer` was confirmed on 2026-09-03.
 
 ## Vocabulary attribution
 
