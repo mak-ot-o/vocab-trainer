@@ -11,6 +11,14 @@
   const SWIPE_X_THRESHOLD = 80;
   const SWIPE_UP_THRESHOLD = 80;
   const POS_PRIORITY = ["noun", "verb", "adjective", "adverb"];
+  const REVIEW_FILTERS = [
+    { value: "all", label: "All" },
+    { value: "unreviewed", label: "Not reviewed" },
+    { value: "known", label: "Know" },
+    { value: "unknown", label: "Don't know" },
+    { value: "unsure", label: "Unsure" },
+    { value: "needs_review", label: "Don't know + Unsure" }
+  ];
 
   const state = {
     words: [],
@@ -19,6 +27,7 @@
     currentIndex: 0,
     order: "frequency",
     partOfSpeech: "all",
+    reviewStatus: "all",
     pointerId: null,
     startX: 0,
     startY: 0,
@@ -36,6 +45,7 @@
     wordCount: document.getElementById("wordCount"),
     reviewedCount: document.getElementById("reviewedCount"),
     posFilter: document.getElementById("posFilter"),
+    reviewFilter: document.getElementById("reviewFilter"),
     startButton: document.getElementById("startButton"),
     csvInput: document.getElementById("csvInput"),
     exportButton: document.getElementById("exportButton"),
@@ -154,6 +164,10 @@
     return `${word.rank}::${word.word.toLowerCase()}`;
   }
 
+  function resultFor(word) {
+    return state.results[resultKey(word)] || null;
+  }
+
   function hasPartOfSpeechData(words = state.words) {
     return words.some((word) => String(word.part_of_speech || "").trim() !== "");
   }
@@ -204,13 +218,76 @@
     els.posFilter.value = state.partOfSpeech;
   }
 
-  function getSelectedWords() {
+  function getPartOfSpeechWords() {
     if (state.partOfSpeech === "all") return state.words;
     return state.words.filter((word) => word.part_of_speech === state.partOfSpeech);
   }
 
+  function matchesReviewStatus(word, filter = state.reviewStatus) {
+    const result = resultFor(word);
+    const status = result?.status || "";
+
+    switch (filter) {
+      case "unreviewed":
+        return !result;
+      case "known":
+        return status === "known";
+      case "unknown":
+        return status === "unknown";
+      case "unsure":
+        return status === "unsure";
+      case "needs_review":
+        return status === "unknown" || status === "unsure";
+      default:
+        return true;
+    }
+  }
+
+  function getReviewStatusCounts(words = getPartOfSpeechWords()) {
+    const counts = {
+      all: words.length,
+      unreviewed: 0,
+      known: 0,
+      unknown: 0,
+      unsure: 0,
+      needs_review: 0
+    };
+
+    for (const word of words) {
+      const result = resultFor(word);
+      const status = result?.status || "";
+      if (!result) counts.unreviewed += 1;
+      if (status === "known") counts.known += 1;
+      if (status === "unknown") counts.unknown += 1;
+      if (status === "unsure") counts.unsure += 1;
+      if (status === "unknown" || status === "unsure") counts.needs_review += 1;
+    }
+    return counts;
+  }
+
+  function updateReviewStatusOptions(resetSelection = false) {
+    const requested = resetSelection ? "all" : (state.reviewStatus || els.reviewFilter.value || "all");
+    const counts = getReviewStatusCounts();
+    els.reviewFilter.replaceChildren();
+
+    for (const filter of REVIEW_FILTERS) {
+      const option = document.createElement("option");
+      option.value = filter.value;
+      option.textContent = `${filter.label} (${counts[filter.value]})`;
+      els.reviewFilter.appendChild(option);
+    }
+
+    const availableValues = new Set([...els.reviewFilter.options].map((option) => option.value));
+    state.reviewStatus = availableValues.has(requested) ? requested : "all";
+    els.reviewFilter.value = state.reviewStatus;
+  }
+
+  function getSelectedWords() {
+    return getPartOfSpeechWords().filter((word) => matchesReviewStatus(word));
+  }
+
   function getReviewedCount(words = getSelectedWords()) {
-    return words.reduce((count, word) => count + (state.results[resultKey(word)] ? 1 : 0), 0);
+    return words.reduce((count, word) => count + (resultFor(word) ? 1 : 0), 0);
   }
 
   function updateSetupStats() {
@@ -218,6 +295,11 @@
     els.wordCount.textContent = String(selectedWords.length);
     els.reviewedCount.textContent = String(getReviewedCount(selectedWords));
     els.startButton.disabled = selectedWords.length === 0;
+  }
+
+  function refreshSetupFilters() {
+    updateReviewStatusOptions(false);
+    updateSetupStats();
   }
 
   function showView(name) {
@@ -237,9 +319,11 @@
 
   function startStudy() {
     state.partOfSpeech = els.posFilter.value || "all";
+    state.reviewStatus = els.reviewFilter.value || "all";
     const selectedWords = getSelectedWords();
+
     if (!selectedWords.length) {
-      els.setupMessage.textContent = "No words match the selected part of speech.";
+      els.setupMessage.textContent = "No words match the selected filters.";
       return;
     }
 
@@ -406,7 +490,7 @@
     const lines = [header.join(",")];
 
     for (const word of [...state.words].sort((a, b) => a.rank - b.rank)) {
-      const result = state.results[resultKey(word)] || {};
+      const result = resultFor(word) || {};
       lines.push([
         word.rank,
         word.word,
@@ -432,7 +516,7 @@
   function showDone() {
     const counts = { known: 0, unknown: 0, unsure: 0 };
     for (const word of state.queue) {
-      const status = state.results[resultKey(word)]?.status;
+      const status = resultFor(word)?.status;
       if (status && Object.hasOwn(counts, status)) counts[status] += 1;
     }
 
@@ -441,7 +525,8 @@
       ["Unknown", counts.unknown],
       ["Unsure", counts.unsure]
     ].map(([label, count]) => `<div class="done-stat-row"><span>${label}</span><strong>${count}</strong></div>`).join("");
-    updateSetupStats();
+
+    refreshSetupFilters();
     showView("done");
   }
 
@@ -452,9 +537,11 @@
       const words = csvToWords(text);
       state.words = words;
       state.partOfSpeech = "all";
+      state.reviewStatus = "all";
       saveWords(file.name);
       saveResults();
       updatePartOfSpeechOptions(true);
+      updateReviewStatusOptions(true);
       updateSetupStats();
       els.setupMessage.textContent = hasPartOfSpeechData(words)
         ? `Imported ${words.length} words from ${file.name}.`
@@ -471,6 +558,7 @@
 
     const candidates = [
       { url: "data/NGSL.csv", name: "NGSL.csv" },
+      { url: "../../vocabulary/ngsl/NGSL.csv", name: "NGSL.csv" },
       { url: "data/sample.csv", name: "sample.csv" }
     ];
 
@@ -492,26 +580,41 @@
     if (!window.confirm("Reset all saved vocabulary results?")) return;
     state.results = {};
     saveResults();
+    updateReviewStatusOptions(false);
     updateSetupStats();
     els.setupMessage.textContent = "Results reset.";
   }
 
   function bindEvents() {
     els.startButton.addEventListener("click", startStudy);
+
     els.posFilter.addEventListener("change", () => {
       state.partOfSpeech = els.posFilter.value || "all";
+      updateReviewStatusOptions(false);
       updateSetupStats();
       els.setupMessage.textContent = "";
     });
+
+    els.reviewFilter.addEventListener("change", () => {
+      state.reviewStatus = els.reviewFilter.value || "all";
+      updateSetupStats();
+      els.setupMessage.textContent = "";
+    });
+
     els.csvInput.addEventListener("change", (event) => importCsvFile(event.target.files?.[0]));
     els.exportButton.addEventListener("click", exportResults);
     els.doneExportButton.addEventListener("click", exportResults);
     els.resetButton.addEventListener("click", resetResults);
+
     els.backButton.addEventListener("click", () => {
-      updateSetupStats();
+      refreshSetupFilters();
       showView("setup");
     });
-    els.restartButton.addEventListener("click", () => showView("setup"));
+
+    els.restartButton.addEventListener("click", () => {
+      refreshSetupFilters();
+      showView("setup");
+    });
 
     els.wordCard.addEventListener("pointerdown", onPointerDown);
     els.wordCard.addEventListener("pointermove", onPointerMove);
@@ -525,8 +628,10 @@
     const shouldRefreshStoredNgsl = state.words.length > 0
       && getStoredSourceName() === "NGSL.csv"
       && !hasPartOfSpeechData();
+
     await loadDefaultCsvIfNeeded(shouldRefreshStoredNgsl);
     updatePartOfSpeechOptions();
+    updateReviewStatusOptions();
     bindEvents();
     updateSetupStats();
     showView("setup");

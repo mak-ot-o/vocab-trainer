@@ -49,6 +49,18 @@
         </select>
       </label>
 
+      <label class="panel filter-panel" for="reviewFilter">
+        <span class="label">REVIEW STATUS</span>
+        <select id="reviewFilter" aria-label="Review status">
+          <option value="all">All</option>
+          <option value="unreviewed">Not reviewed</option>
+          <option value="known">Know</option>
+          <option value="unknown">Don't know</option>
+          <option value="unsure">Unsure</option>
+          <option value="needs_review">Don't know + Unsure</option>
+        </select>
+      </label>
+
       <button id="startButton" class="primary-button" type="button">START</button>
 
       <div class="utility-buttons">

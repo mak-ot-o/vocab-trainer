@@ -1,4 +1,4 @@
-const CACHE_NAME = "vocab-trainer-v4";
+const CACHE_NAME = "vocab-trainer-v5";
 const APP_SHELL = [
   "./",
   "index.html",
