@@ -66,11 +66,11 @@ Open the GitHub Pages site in Safari, then use **Add to Home Screen** to install
 
 GitHub Pages deploys from the repository's `main` branch at the repository root.
 
-Final public URL after the repository rename:
+Public URL:
 
 `https://mak-ot-o.github.io/vocab-trainer/`
 
-This README update also triggers a fresh Pages deployment after the repository was renamed from the temporary `-vocab-trainer` slug.
+The repository rename to `mak-ot-o/vocab-trainer` was confirmed on 2026-09-03. This update triggers a fresh Pages deployment under the final repository slug.
 
 ## Vocabulary attribution
 
