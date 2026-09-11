@@ -10,7 +10,7 @@ A minimal iPhone-friendly vocabulary trainer built as a static PWA.
 - Swipe up: **Unsure**.
 - Long press: reveal the Japanese gloss.
 - Study in frequency order or random order.
-- Filter by `part_of_speech`.
+- Filter by learner-facing part of speech.
 - Filter by saved review status: **All**, **Not reviewed**, **Know**, **Don't know**, **Unsure**, or **Don't know + Unsure**.
 - Combine review status, part of speech, and frequency/random order freely.
 - Review-status filters use the latest saved status for each word; changing a status during a session affects later sessions, not the already-built current queue.
@@ -41,13 +41,21 @@ areas/english/vocabulary/ngsl/NGSL.csv
 
 Changes to the vocabulary source should be made there first and then reflected into this public distribution repository.
 
-### 2026-09-12 Japanese-gloss refresh
+### Learner-facing override layer
 
-The canonical NGSL learner list was screened across all 2,809 rows for Japanese glosses that could mislead learners about the representative part of speech or the official selected definition sense. **113 reviewed Japanese glosses** were updated. Canonical rank, headword, representative PoS, and official definition were not changed by this refresh.
+The source-backed NGSL rows are preserved for provenance. A separate learner-facing correction layer is distributed as:
 
-`data-version.js` provides a one-time client migration for this dataset version. Existing cached NGSL word metadata is refreshed, while the separate saved review-result store remains intact. Therefore existing **Know / Don't know / Unsure**, review timestamps, and review counts are preserved.
+```text
+data/NGSL_learner_overrides.csv
+```
 
-Result identity remains based on `rank::word`, so this migration is safe because the refresh does not change rank/headword identity.
+`learner-overrides.js` applies that file when the default NGSL dataset loads. The override layer can clarify the Japanese gloss and, where necessary, provide a single study part-of-speech category without rewriting the underlying source row.
+
+The current v2 audit contains **227 learner override entries**, including **45 explicit study-PoS selections**. Rank and headword identity are unchanged.
+
+`data-version.js` provides a one-time client migration for this learner-data version. Existing cached NGSL word metadata is refreshed, while the separate saved review-result store remains intact. Therefore existing **Know / Don't know / Unsure**, review timestamps, and review counts are preserved.
+
+Result identity remains based on `rank::word`, so this migration does not reset learning history.
 
 ## CSV format
 
@@ -63,7 +71,7 @@ Optional column used by the built-in filter:
 part_of_speech
 ```
 
-The bundled NGSL source includes additional fields such as `definition` and `example`; the trainer only reads the fields it needs.
+The bundled NGSL source includes additional fields such as `definition` and `example`; the trainer only reads the fields it needs. The learner override layer is only applied to the bundled/default NGSL source, not to arbitrary manually imported CSVs.
 
 ## Run locally
 
