@@ -1,0 +1,228 @@
+rank,word,study_part_of_speech,japanese,reason
+88,most,,大部分；ほとんど,pronoun gloss aligned to 'nearly all' sense
+91,much,,多く；たくさん,"pronoun gloss, remove adjective/adverb drift"
+95,mean,,意味する,verb sense only
+123,lot,,多数；多量,noun form
+135,meet,,会う；集まる,verb form
+193,under,preposition,～の下に,definition and example are prepositional
+199,state,,州,selected noun sense is a political region
+206,name,,名前,noun sense only
+215,order,,注文する,verb form
+220,pay,,支払う,verb form
+223,service,,点検する；整備する,selected verb sense is machinery maintenance
+232,plan,,計画する,verb form
+233,result,,結果として生じる；～という結果になる,verb form
+265,once,,一度；かつて,adverb form
+286,process,,処理する；加工する,verb form
+300,local,,地元の；地域の,adjective form
+327,base,,基；基礎,noun sense only
+374,remain,,残る；～のままである,verb form
+380,reach,,届く；到達する；達する,verb form
+384,note,,言及する；述べる；注意する,verb sense
+400,further,,さらに先の；追加の,adjective form
+409,individual,,個人,noun form
+419,short,adjective,短い,definition and example are adjectival
+424,cover,,覆い；カバー；ふた,noun form
+452,forward,,前方へ；前へ,adverb form
+472,detail,,詳細；細部,noun form
+488,front,,前の；前面の,adjective form
+498,charge,,料金を請求する,selected verb sense
+500,sign,,印；標識；兆候,noun sense only
+537,national,,国家の；全国的な,adjective form
+545,risk,,危険を冒す；～を危険にさらす,verb form
+547,standard,,標準的な；標準の,adjective form
+572,limit,,限度；境界；制限,noun form
+586,ground,noun,地面；土地,definition and example are nominal
+597,fine,,良い；問題ない,adjective sense
+659,key,,鍵,selected noun sense
+660,inside,,内部の；内側の,adjective form
+664,notice,,気づく；認識する,verb form
+672,paint,,塗る；描く,verb form
+678,growth,,成長；増加,"noun sense, remove unrelated gloss"
+690,average,,平均的な；普通の,adjective form
+729,lack,,欠く；不足している,verb form
+730,review,,見直す；評価する,verb form
+770,link,,つなぐ；連結する,verb form
+784,interview,,面接する；インタビューする,verb form
+789,capital,,主要な；重大な,adjective sense
+823,score,,得点する,verb form
+844,advance,,前進する；進む,verb form
+914,male,,男性の；雄の,adjective form
+936,professional,,専門職の；職業上の,adjective form
+945,ring,,指輪；ベルなどの鳴る音,noun senses
+958,track,,追跡する；跡を追う,verb form
+961,female,,女性の；雌の,adjective form
+1046,administration,,管理；運営,selected noun sense
+1048,text,,本文；文章；テキスト,noun sense
+1062,sample,,試す；試食する,verb form
+1086,negative,,否定的な；好ましくない,adjective form
+1104,examine,,調べる；検査する,verb sense
+1105,lay,,置く；横たえる,transitive verb sense
+1113,overall,,全体的な,adjective form
+1123,federal,,連邦の,adjective form
+1146,guide,,案内する；導く,verb form
+1152,mistake,,間違い；誤り,correct noun gloss
+1158,wave,,手を振る,verb form
+1159,south,,南,noun form
+1161,surface,,表面の,adjective form
+1173,select,,選ぶ；選択する,verb form
+1186,presence,,存在；居ること,noun sense
+1207,senior,,年上の；上位の,adjective form
+1215,reform,,改革する；改良する,verb form
+1256,plus,,～を加えて；プラス,preposition sense
+1260,commercial,,コマーシャル；広告,noun form
+1276,secret,,秘密の,adjective form
+1282,initial,,最初の；初期の,adjective form
+1284,suggestion,,提案；助言,noun sense
+1285,critical,,重大な；危機的な,adjective sense
+1286,gather,,集める；集まる,verb form
+1290,essential,,不可欠な；必須の,adjective form
+1321,expand,,拡大する；広がる,verb sense
+1353,afraid,,恐れて；怖がっている,adjective phrase
+1355,conclude,,終える；終わる,selected definition sense
+1360,environmental,,環境の,adjective form
+1362,healthy,,健康な；健全な,adjective form
+1364,volume,,音量,selected noun sense
+1392,manufacture,,製造する,verb form
+1407,branch,,枝；支店；部門,noun senses in definition
+1433,quote,,引用する,selected verb sense
+1441,manner,,方法；やり方,selected noun sense
+1463,switch,,切り替える；交換する,verb form
+1465,corporate,,企業の；法人の,adjective form
+1467,wood,,木材；木,noun sense
+1471,representative,,代表者,noun form
+1513,bond,,絆を結ぶ；結びつく,verb usage
+1519,literature,,文学；文献,noun sense
+1529,root,,根；根元,noun form
+1535,rank,,順位づけする；位置づける,verb form
+1538,friendly,adjective,友好的な；親切な,definition and example are adjectival
+1550,moral,,道徳的な,adjective form
+1556,master,,熟練した；名人級の,adjective form
+1570,guarantee,,保証する,verb form
+1593,commission,,委員会；調査委員会,selected noun sense
+1596,instrument,,器具；機器；楽器,general noun sense
+1613,import,,輸入する,verb form
+1623,relief,,安心；安堵,selected noun sense
+1651,vision,,視力；視覚,selected noun sense
+1652,personality,,性格；個性,noun sense
+1658,capture,,捕らえる,active verb form
+1669,significantly,,大幅に；著しく,adverb form
+1674,ideal,,理想的な,adjective form
+1675,folk,noun,人々；庶民,definition and example are nominal
+1677,guard,,守る；見張る,verb form
+1700,formal,,正式な；公式の,adjective sense
+1714,command,,命令する；指揮する,verb form
+1724,criminal,,犯罪の；刑事上の,adjective form
+1733,yield,,譲る；屈する,verb sense
+1751,academic,,学術的な；大学の,adjective form
+1766,settlement,,和解；合意,selected noun sense
+1768,widely,,広く；幅広く,adverb form
+1771,estate,,土地；地所,selected noun sense
+1791,smell,,においを嗅ぐ；においがする,verb form
+1796,pilot,,パイロット；操縦士,noun form
+1806,immediate,,即座の；直近の,adjective form
+1813,angry,,怒っている,adjective form
+1847,diet,noun,食事；食生活,definition and example are nominal
+1875,classic,,名作；定番,noun form
+1886,defeat,,負かす；打ち破る,verb form
+1891,emergency,,緊急事態,noun form
+1898,valuable,,価値のある；高価な,adjective sense
+1904,highlight,,見どころ；ハイライト,noun form
+1933,update,,更新する,verb form
+1937,swing,,揺れる；揺らす,verb form
+1949,prospect,,見込み；可能性,noun sense
+1961,plain,,明白な；簡素な,adjective sense
+1963,rural,,農村の；田舎の,adjective form
+1973,premise,,前提,selected noun sense
+1981,intellectual,,知識人,noun usage in example/source POS
+2027,representation,,代表；代理,selected noun sense
+2037,retail,,小売りの,adjective form
+2039,unlikely,adjective,ありそうにない,definition and example are adjectival
+2042,slight,,わずかな；軽微な,adjective form
+2043,unknown,,未知；未知のもの,noun form
+2047,trace,,跡を追う；追跡する,verb form
+2049,equivalent,,同等の；相当する,adjective form
+2055,uniform,,制服,noun form
+2057,pitch,,音の高さ；投球；売り込み,noun senses in definition
+2065,profile,,プロフィール；概要,noun form
+2078,nervous,,緊張した；神経質な,adjective form
+2079,input,,入力する,verb form
+2087,recruit,,採用する；募集する,verb form
+2098,FALSE,,誤った；偽の,adjective form
+2126,spare,,予備の,adjective form
+2129,guilty,,有罪の；罪のある,adjective form
+2158,everyday,,日常の；普段の,adjective form
+2162,scream,,悲鳴を上げる,verb form
+2179,strain,,緊張；負担,noun sense
+2197,bid,,入札する,verb form
+2203,reverse,,逆転する；逆にする,verb form
+2236,harm,,害する；傷つける,verb form
+2243,impress,,感銘を与える；感動させる,transitive verb sense
+2259,iron,,鉄,selected noun sense
+2261,membership,,会員資格；会員全体,noun sense
+2281,sponsor,,スポンサーになる；資金提供する,verb form
+2286,burden,,負担をかける,verb form
+2294,bath,,入浴；風呂,noun sense
+2315,overseas,,海外へ；海外で,adverb form
+2317,establishment,,組織；機関；施設,selected noun sense
+2336,dependent,,依存している；扶養されている,adjective form
+2343,rival,,競争相手の；ライバルの,adjective usage
+2358,adequate,,十分な；適切な,adjective sense
+2376,charm,,魅力,noun form
+2380,compound,,化合物；合成物,noun form
+2381,rescue,,救助する,verb form
+2386,league,,リーグ；競技連盟,sports association sense
+2400,stroke,,なでる,verb form
+2401,dare,verb,あえて～する；思い切って～する,definition is verbal
+2404,divorce,noun,離婚,definition is nominal
+2405,ruin,,台無しにする；破壊する,verb form
+2407,counsel,verb,助言する,definition is verbal
+2416,float,verb,浮く；浮かぶ,definition is verbal
+2433,successfully,,うまく；成功して,adverb form
+2439,mutual,,相互の；互いの,adjective sense
+2443,mortgage,noun,住宅ローン；抵当,definition is nominal
+2444,promotion,,昇進,selected noun sense
+2450,roughly,,おおよそ；だいたい,definition sense
+2453,march,verb,行進する,definition is verbal
+2455,compromise,noun,妥協；折衷,definition is nominal
+2459,salt,noun,塩,definition is nominal
+2460,glance,verb,ちらりと見る,definition is verbal
+2463,brush,noun,ブラシ；はけ,definition is nominal
+2469,format,noun,形式；書式,definition is nominal
+2472,embrace,verb,抱きしめる；受け入れる,definition is verbal
+2473,praise,verb,称賛する,definition is verbal
+2475,pump,verb,ポンプで送る,definition is verbal
+2478,golf,noun,ゴルフ,definition is nominal
+2485,flash,noun,閃光；フラッシュ,definition is nominal
+2490,gesture,noun,身振り；ジェスチャー,definition is nominal
+2492,fantastic,,素晴らしい,typo correction
+2500,twist,verb,ねじる；ひねる,definition is verbal
+2514,click,verb,クリックする,definition is verbal
+2518,pile,noun,山；積み重ね,definition is nominal
+2525,stake,noun,杭,definition is nominal
+2534,chat,verb,雑談する,definition is verbal
+2539,boost,verb,促進する；引き上げる,definition is verbal
+2545,boom,verb,鳴り響く,definition is verbal
+2555,fold,verb,折りたたむ,definition is verbal
+2567,craft,verb,手作りする；巧みに作る,definition is verbal
+2580,jail,noun,刑務所,definition is nominal
+2586,trigger,verb,引き起こす,definition is verbal
+2593,mystery,,ミステリー；推理もの,selected noun sense
+2594,ski,noun,スキー板,definition is nominal
+2595,whisper,verb,ささやく,definition is verbal
+2610,regardless,adverb,かまわず；それでも,definition and example are adverbial
+2636,interior,,内部の；室内の,adjective form
+2643,excess,,過剰；超過,noun form
+2681,cluster,verb,群がる；集まる,definition is verbal
+2698,genuine,,本物の；心からの,adjective sense
+2701,reckon,,思う；推測する；計算する,verb senses
+2702,silly,adjective,ばかな；愚かな,definition and example are adjectival
+2719,filter,,フィルター；ろ過器,noun form
+2726,shade,noun,日陰；陰,definition is nominal
+2730,leap,verb,跳ぶ；跳躍する,definition is verbal
+2731,snap,verb,パチンと折る；折れる,definition is verbal
+2735,swear,verb,誓う,definition is verbal
+2742,sigh,,ため息をつく,verb form
+2760,organic,,有機の；オーガニックの,adjective form
+2772,gaze,noun,凝視；視線,definition is nominal
+2783,registration,,登録,noun sense
