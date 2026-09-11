@@ -2,7 +2,7 @@
 2102,alter,verb,to make a change to something,変更する,We must alter our plan.
 2103,perceive,verb,to notice or become aware of something,知覚する；気づく,How do you perceive the world?
 2104,routine,noun,happening or done regularly or frequently,日課,I follow my routine every day.
-2105,sink,verb,"to go down below the surface of water, mud, etc.",流し,I didn't sink into the mud too far.
+2105,sink,verb,"to go down below the surface of water, mud, etc.",沈む；沈める,I didn't sink into the mud too far.
 2106,stare,verb,to look at someone or something for a long time,じっと見る,I could stare at your face forever.
 2107,anymore,adverb,no longer; no more,もはやこれ以上～しない,He doesn't work anymore.
 2108,hero,noun,person of great courage and strength who saves others,英雄,A hero lies within you.
@@ -13,7 +13,7 @@
 2113,truck,noun,a large road vehicle used to carry things,トラック,He has a large truck.
 2114,nose,noun,part of the face used for breathing and smelling,鼻,The nose detects smells.
 2115,beside,preposition,by the side of something; next to something,そばに,I'm walking beside her.
-2116,sail,verb,to travel on water in a ship or boat,帆,Can you sail a boat?
+2116,sail,verb,to travel on water in a ship or boat,航海する；船で進む,Can you sail a boat?
 2117,disaster,noun,something that causes a lot of harm or damage,災害,The damage of the disaster has been enormous.
 2118,pace,noun,the speed at which someone or something moves or happens,ペース；一歩；速度,The pace of events is accelerating.
 2119,heavily,adverb,a lot or to a great degree,重く,He depends heavily on others.
@@ -37,7 +37,7 @@
 2137,obligation,noun,something that you do because it is your duty or because you feel you have to,義務,You only do that out of obligation.
 2138,sir,noun,form of address to a man you respect,～様；,"I'm at your service, sir."
 2139,evaluate,verb,to form an idea to judge something carefully,評価する,I need to evaluate my behavior.
-2140,anger,verb,"to make someone mad, upset, or annoyed","怒り, 憤り",The decision may anger residents.
+2140,anger,verb,"to make someone mad, upset, or annoyed",怒らせる,The decision may anger residents.
 2141,pub,noun,a place that sells alcohol and food,パブ；パブ,The old pub is closed.
 2142,perception,noun,the way in which one sees or understands something,知覚；知覚,Learning opens new doors of perception.
 2143,naturally,adverb,as someone would expect; not surprising,自然に,Janos's parents were naturally upset.
@@ -45,7 +45,7 @@
 2145,database,noun,information stored in a computer in an organized way,データベース,We hacked into a government database.
 2146,initially,adverb,at the beginning,初めは,Commence from here initially.
 2147,territory,noun,area of land or ocean owned or controlled by a government or person,領土,That island is American territory.
-2148,stream,noun,small river,流れる,A small stream runs by my house.
+2148,stream,noun,small river,小川；流れ,A small stream runs by my house.
 2149,rarely,adverb,in an infrequent manner,めったに～ない,I use this expression very rarely.
 2150,height,noun,distance of something from the bottom to the top,高さ,The building's height is impressive.
 2151,apparent,adjective,easy to see or clearly understand,明白な,The light became more apparent.
@@ -80,8 +80,8 @@
 2180,innovation,noun,new invention or idea that is created,革新,There is an innovation.
 2181,album,noun,book with a collection of photographs or pictures,アルバム,He showed me his photograph album.
 2182,singer,noun,"a person who sings, often as a profession",歌手,She's well known as a singer.
-2183,trail,noun,"a path through the countryside, often where people walk",跡，引きずる；後を追う,The trail leads through the woods.
-2184,trap,noun,a device used for catching animals,わな，わなで捕える,He set a trap to catch the animal.
+2183,trail,noun,"a path through the countryside, often where people walk",小道；道；跡,The trail leads through the woods.
+2184,trap,noun,a device used for catching animals,わな；仕掛け,He set a trap to catch the animal.
 2185,loose,adjective,not tightly attached or held,ゆるい；自由な,He has a few screws loose.
 2186,extension,noun,extra time allowed to complete something,時間延長,I need an extension lead.
 2187,wealth,noun,large amount of money and possessions,富,He tried to accumulate wealth.
@@ -95,6 +95,6 @@
 2195,transition,noun,a gradual change from one condition to another,遷移,The educational system is in transition.
 2196,frighten,verb,to make someone afraid or nervous,怖がらせる,They're trying to frighten people.
 2197,bid,verb,an offer to pay a particular amount of money for something,入札,I bid on it.
-2198,breed,verb,to produce baby animals of specific kinds,繁殖,"Feed a pigeon, breed a rat."
+2198,breed,verb,to produce baby animals of specific kinds,繁殖させる,"Feed a pigeon, breed a rat."
 2199,extraordinary,adjective,beyond what is ordinary; very unusual; remarkable,並外れた,It was something extraordinary.
 2200,brilliant,adjective,having a great amount of intelligence or talent,非常に優秀な；才気のある,She's a brilliant economist.
