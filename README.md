@@ -41,6 +41,14 @@ areas/english/vocabulary/ngsl/NGSL.csv
 
 Changes to the vocabulary source should be made there first and then reflected into this public distribution repository.
 
+### 2026-09-12 Japanese-gloss refresh
+
+The canonical NGSL learner list was screened across all 2,809 rows for Japanese glosses that could mislead learners about the representative part of speech or the official selected definition sense. **113 reviewed Japanese glosses** were updated. Canonical rank, headword, representative PoS, and official definition were not changed by this refresh.
+
+`data-version.js` provides a one-time client migration for this dataset version. Existing cached NGSL word metadata is refreshed, while the separate saved review-result store remains intact. Therefore existing **Know / Don't know / Unsure**, review timestamps, and review counts are preserved.
+
+Result identity remains based on `rank::word`, so this migration is safe because the refresh does not change rank/headword identity.
+
 ## CSV format
 
 Required columns:
