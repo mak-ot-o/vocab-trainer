@@ -17,6 +17,10 @@ for path in sorted(CHUNKS.glob("*.csv")):
         rows = list(csv.reader(f))
     chunk_rows[path] = rows
     for row in rows:
+        if not row:
+            continue
+        if row[0].strip().lower().lstrip("\ufeff") == "rank":
+            continue
         if len(row) < 6:
             raise SystemExit(f"bad row in {path}: {row!r}")
         rank = int(row[0])
@@ -30,6 +34,7 @@ if len(by_key) != 2809 or sorted(all_ranks) != list(range(1, 2810)):
     raise SystemExit(f"invalid public dataset: rows={len(by_key)}")
 
 changed = 0
+already_applied = 0
 for ov in overrides:
     key = (ov["rank"], ov["word"])
     if key not in by_key:
@@ -37,6 +42,7 @@ for ov in overrides:
     _, row = by_key[key]
     current = row[4]
     if current == ov["new_japanese"]:
+        already_applied += 1
         continue
     if current != ov["old_japanese"]:
         raise SystemExit(
@@ -50,4 +56,4 @@ for path, rows in chunk_rows.items():
         w = csv.writer(f, lineterminator="\n")
         w.writerows(rows)
 
-print(f"changed={changed} overrides={len(overrides)} rows={len(by_key)} chunks={len(chunk_rows)}")
+print(f"changed={changed} already_applied={already_applied} overrides={len(overrides)} rows={len(by_key)} chunks={len(chunk_rows)}")
