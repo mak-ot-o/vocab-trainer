@@ -1,4 +1,4 @@
-const CACHE_NAME = "vocab-trainer-v7";
+const CACHE_NAME = "vocab-trainer-v8";
 const APP_SHELL = [
   "./",
   "index.html",
@@ -9,7 +9,8 @@ const APP_SHELL = [
   "app.js",
   "manifest.json",
   "data/sample.csv",
-  "data/NGSL_learner_overrides.csv"
+  "data/NGSL_learner_overrides.csv",
+  "data/NGSL_source_conflict_resolutions_2026-09-12.csv"
 ];
 
 self.addEventListener("install", (event) => {

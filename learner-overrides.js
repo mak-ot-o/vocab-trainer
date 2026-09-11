@@ -2,11 +2,17 @@
   "use strict";
 
   const priorFetch = window.fetch.bind(window);
-  const OVERRIDE_CANDIDATES = [
-    "data/NGSL_learner_overrides.csv",
-    "../../vocabulary/ngsl/NGSL_learner_overrides.csv"
+  const OVERRIDE_LAYERS = [
+    [
+      "data/NGSL_learner_overrides.csv",
+      "../../vocabulary/ngsl/NGSL_learner_overrides.csv"
+    ],
+    [
+      "data/NGSL_source_conflict_resolutions_2026-09-12.csv",
+      "../../vocabulary/ngsl/NGSL_source_conflict_resolutions_2026-09-12.csv"
+    ]
   ];
-  let overridePromise = null;
+  let overrideLayersPromise = null;
 
   function normalizeHeader(value) {
     return String(value || "").trim().toLowerCase().replace(/^\ufeff/, "");
@@ -70,21 +76,25 @@
     });
   }
 
-  async function loadOverrideText() {
-    if (!overridePromise) {
-      overridePromise = (async () => {
-        for (const candidate of OVERRIDE_CANDIDATES) {
-          try {
-            const response = await priorFetch(candidate, { cache: "no-store" });
-            if (response.ok) return response.text();
-          } catch {
-            // Try the next canonical/distribution location.
-          }
-        }
-        return "";
-      })();
+  async function loadFirstAvailable(candidates) {
+    for (const candidate of candidates) {
+      try {
+        const response = await priorFetch(candidate, { cache: "no-store" });
+        if (response.ok) return response.text();
+      } catch {
+        // Try the next canonical/distribution location.
+      }
     }
-    return overridePromise;
+    return "";
+  }
+
+  function loadOverrideLayers() {
+    if (!overrideLayersPromise) {
+      overrideLayersPromise = Promise.all(
+        OVERRIDE_LAYERS.map((candidates) => loadFirstAvailable(candidates))
+      );
+    }
+    return overrideLayersPromise;
   }
 
   function applyOverrides(baseText, overrideText) {
@@ -140,8 +150,11 @@
 
     const baseText = await response.text();
     try {
-      const overrideText = await loadOverrideText();
-      const mergedText = overrideText ? applyOverrides(baseText, overrideText) : baseText;
+      const overrideLayers = await loadOverrideLayers();
+      const mergedText = overrideLayers.reduce(
+        (text, overrideText) => overrideText ? applyOverrides(text, overrideText) : text,
+        baseText
+      );
       return makeCsvResponse(mergedText, response);
     } catch {
       return makeCsvResponse(baseText, response);

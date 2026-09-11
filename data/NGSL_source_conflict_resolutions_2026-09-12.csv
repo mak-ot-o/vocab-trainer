@@ -1,0 +1,11 @@
+rank,word,study_part_of_speech,japanese,reason
+527,fund,noun,基金；資金,source PoS and example are nominal; definition is verbal
+586,ground,noun,地面；土地,definition and example are nominal; source PoS conflicts
+917,exercise,noun,運動,source PoS and example are nominal; definition is verbal
+1471,representative,noun,代表者,source PoS and example are nominal; definition is adjectival
+1513,bond,verb,絆を結ぶ；結びつく,source PoS and example are verbal; definition is nominal
+1567,shot,verb,シュートする,source PoS and sports example are verbal; definition is nominal
+1847,diet,noun,食事；食生活,definition and example are nominal; source PoS conflicts
+2197,bid,verb,入札する,source PoS and example are verbal; definition is nominal
+2286,burden,verb,負担をかける,source PoS and example are verbal; definition is nominal
+2525,stake,verb,～をかける；危険にさらす,source PoS and example are verbal; definition is nominal
