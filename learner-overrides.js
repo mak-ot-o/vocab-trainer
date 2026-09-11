@@ -59,6 +59,17 @@
     return path.endsWith("/data/NGSL.csv") || path.endsWith("/areas/english/vocabulary/ngsl/NGSL.csv");
   }
 
+  function makeCsvResponse(text, response) {
+    const headers = new Headers(response.headers);
+    headers.set("Content-Type", "text/csv; charset=utf-8");
+    headers.delete("Content-Length");
+    return new Response(text, {
+      status: response.status,
+      statusText: response.statusText,
+      headers
+    });
+  }
+
   async function loadOverrideText() {
     if (!overridePromise) {
       overridePromise = (async () => {
@@ -127,20 +138,13 @@
     const response = await priorFetch(input, init);
     if (!response.ok || !isNgslRequest(inputUrl)) return response;
 
+    const baseText = await response.text();
     try {
-      const baseText = await response.text();
       const overrideText = await loadOverrideText();
       const mergedText = overrideText ? applyOverrides(baseText, overrideText) : baseText;
-      const headers = new Headers(response.headers);
-      headers.set("Content-Type", "text/csv; charset=utf-8");
-      headers.delete("Content-Length");
-      return new Response(mergedText, {
-        status: response.status,
-        statusText: response.statusText,
-        headers
-      });
+      return makeCsvResponse(mergedText, response);
     } catch {
-      return response;
+      return makeCsvResponse(baseText, response);
     }
   };
 })();
