@@ -41,19 +41,20 @@ areas/english/vocabulary/ngsl/NGSL.csv
 
 Changes to the vocabulary source should be made there first and then reflected into this public distribution repository.
 
-### Learner-facing override layer
+### Learner-facing override layers
 
-The source-backed NGSL rows are preserved for provenance. A separate learner-facing correction layer is distributed as:
+The source-backed NGSL rows are preserved for provenance. Learner-facing corrections are distributed as:
 
 ```text
 data/NGSL_learner_overrides.csv
+data/NGSL_source_conflict_resolutions_2026-09-12.csv
 ```
 
-`learner-overrides.js` applies that file when the default NGSL dataset loads. The override layer can clarify the Japanese gloss and, where necessary, provide a single study part-of-speech category without rewriting the underlying source row.
+`learner-overrides.js` applies the general learner override first and the audited source-conflict resolution layer second when the default NGSL dataset loads. These layers can clarify the Japanese gloss and, where necessary, provide a single study part-of-speech category without rewriting the underlying source row.
 
-The current v2 audit contains **227 learner override entries**, including **45 explicit study-PoS selections**. Rank and headword identity are unchanged.
+The v2 audit contains **227 learner override entries**, including **45 explicit study-PoS selections**. A re-audit then checked those rows plus all known source-level PoS/definition conflicts and added a narrow 10-row conflict-resolution layer. Rank and headword identity are unchanged.
 
-`data-version.js` provides a one-time client migration for this learner-data version. Existing cached NGSL word metadata is refreshed, while the separate saved review-result store remains intact. Therefore existing **Know / Don't know / Unsure**, review timestamps, and review counts are preserved.
+`data-version.js` provides a one-time client migration for the current learner-data version. Existing cached NGSL word metadata is refreshed, while the separate saved review-result store remains intact. Therefore existing **Know / Don't know / Unsure**, review timestamps, and review counts are preserved.
 
 Result identity remains based on `rank::word`, so this migration does not reset learning history.
 
@@ -71,7 +72,7 @@ Optional column used by the built-in filter:
 part_of_speech
 ```
 
-The bundled NGSL source includes additional fields such as `definition` and `example`; the trainer only reads the fields it needs. The learner override layer is only applied to the bundled/default NGSL source, not to arbitrary manually imported CSVs.
+The bundled NGSL source includes additional fields such as `definition` and `example`; the trainer only reads the fields it needs. The learner override layers are only applied to the bundled/default NGSL source, not to arbitrary manually imported CSVs.
 
 ## Run locally
 
